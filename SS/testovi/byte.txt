@@ -1,0 +1,51 @@
+
+
+
+.section .data:
+
+.global z
+.extern z
+.extern y
+.extern sim
+
+
+.byte 0,1,+1,10,16,+001,255,256,257
+
+.byte -0,-1,-10,-16,-128,-129 
+
+.byte 0x000,0x001,+0x0001,0x10,0xA,0xFF,0x1000
+
+.byte -0x00,-0x001,-0x010,-0x00A,-0x80
+
+.byte 'a','b'
+
+.byte -'a',-'b'
+
+.byte a
+x: .byte a
+y: .byte c
+z: .byte d
+a: .byte x
+b: .byte y
+c: .byte z
+d: .byte sim
+
+.section .text
+
+.skip 1
+p: .byte a
+l: .byte sim
+
+.section .data
+
+k: .byte l
+m: .byte p
+
+
+
+.end
+
+
+asasawaawaw
+
+

@@ -1,0 +1,50 @@
+
+.section .data:
+
+.global z
+.extern z
+.extern y
+.extern sim
+
+
+#.word 0,1,+1,10,16,+001,255,256,4095,4096,65535
+
+#.word -0,-1,-10,-16,-128,-129,-255,-256,-32768 ,-4095,-4096
+
+#.word 0x000,0x001,+0x0001,0x10,0xA,0xFF,0x1000,0xFFFF,0x1000001
+
+#.word -0x00,-0x001,-0x010,-0x00A,-0x80,-0x8000
+
+#.word 'a','b'
+
+.word -'b',-'b',-'a'
+
+
+
+.word a
+x: .word a
+y: .word c
+z: .word d
+a: .word x
+b: .word y
+c: .word z
+d: .word sim
+
+.section .text
+
+.skip 2
+p: .word a
+l: .word sim
+
+.section .data
+
+k: .word l
+m: .word p
+
+
+
+.end
+
+
+asasawaawaw
+

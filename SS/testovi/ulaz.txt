@@ -1,0 +1,75 @@
+
+
+.extern sim1,sim2
+
+
+
+.equ k,a
+.equ u,y
+.equ m,c-b
+.equ p,c-b+d
+.equ o,c-b+x
+.equ l,c-b+y-x
+.equ r,w-1
+.equ w,q-1
+.equ q, -'a'+sim1
+.equ i,4
+
+.section .data
+
+.global k,m,w,r,u,o,p,l
+
+#.equ k,+4
+#.equ m,-10
+#.equ p,+0x01
+#.equ o,-0xA
+#.equ l,+0x10
+#.equ q,'a'
+#.equ w,-'a'
+
+
+
+#.equ k,+2+'a'-0x01
+#.equ m,-2-0xA
+#.equ p,+0x01-'a'
+#.equ o,-0xA+0x10
+#.equ l,+0x10-2
+#.equ q,'a'+3
+#.equ w,-'a'-0x01
+
+#.global k
+
+
+
+#movb $2,k
+
+
+
+#.word -'b'
+
+#.word k,m,p,o,l
+
+#.byte k,m,p,o,l
+
+
+a: .word 3
+b: .word 1
+c: jmp *l(%pc)
+d: movw l(%r7),l(%pc)
+.section .text
+
+x: .word l
+y: .word k
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+#mov b,%r1
+#movw c,sim1
+#movb e,-'a'(%r1)
+
+#jmp *b
+#jmp *c
+
+#movw $-1,d
+
+
+
+.section data
+
+
+a: .word 1
+b: .word 2
+c: .word 3
+d: .word 4
+e: .word 5
+
+
+.global c
+.extern e
+.extern sim1
+
+.end

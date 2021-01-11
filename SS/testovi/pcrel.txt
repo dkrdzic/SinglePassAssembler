@@ -1,0 +1,43 @@
+
+
+#pcrel
+
+.section .data
+.global d
+.extern c
+.global x
+
+
+a: .byte 1
+b: .word 4
+.byte .data
+.byte .text
+
+mov c,%r1
+jmp *b(%r7)
+c: .word 7
+jmp *c(%pc)
+movb b,c(%pc)
+movw c,a(%r7)
+movb b(%pc),a
+movw h(%r7),b
+d: .word 8
+jmp *d(%pc)
+movb d(%pc),d(%r7)
+jmp *z(%r7)
+jmp *y(%r7)
+jmp *x(%r7)
+
+.section .text
+y: .byte d
+x: .byte 6
+z: .byte 8
+
+.section .data
+
+h: movw c(%pc),y
+
+i: jmp *h(%pc)
+
+.end
+

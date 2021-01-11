@@ -1,0 +1,27 @@
+.section .text
+
+.global u
+.extern e
+
+mov c,%r1
+
+a: movw $-'a',y
+b: mov %r1,a
+c: movb (%r4),%r1h
+d: movw -'a'(%r1),f
+
+
+.section .data
+
+x: jmp e
+y: jmp *f
+z: jmp *%r1
+u: jmp -'b'
+
+
+
+.section .text
+
+e: push -1
+f: pop %r1
+

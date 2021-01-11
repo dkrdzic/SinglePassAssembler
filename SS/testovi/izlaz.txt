@@ -1,0 +1,42 @@
+
+-------------------TABLE OF SYMBOLS-------------------
+
+|     LABEL|   SECTION|    OFFSET|    LOCAL?|    NUMBER|
+|     .data|     .data|         0|         l|         0|
+|     .text|     .text|         0|         l|         1|
+|         k|     .data|         0|         g|         2|
+|         u|     .text|         2|         g|         3|
+|         m|     *ABS*|         2|         g|         4|
+|         p|     .data|        10|         g|         5|
+|         o|     .text|         2|         g|         6|
+|         l|     *ABS*|         4|         g|         7|
+|         r|     *UND*|         0|         g|         8|
+|         w|     *UND*|         0|         g|         9|
+|         q|     *UND*|         0|         l|        10|
+|         i|     *ABS*|         4|         l|        11|
+|         a|     .data|         0|         l|        12|
+|         b|     .data|         2|         l|        13|
+|         c|     .data|         4|         l|        14|
+|         d|     .data|         8|         l|        15|
+|         x|     .text|         0|         l|        16|
+|         y|     .text|         2|         l|        17|
+|      sim1|     *UND*|         0|         g|        18|
+|      sim2|     *UND*|         0|         g|        19|
+
+-------------------RELOCATION TABLE-------------------
+
+|   SECTION|        LC|           TYPE|     VALUE|
+|     .text|         2|    R_X86_16_16|         2|
+
+----------------- MEMORY ---------------------
+
+
+----------.data----------
+03 00 
+01 00 
+2C 6E FC FF 
+64 6E F5 FF 6E F5 FF 
+
+----------.text----------
+04 00 
+00 00 
