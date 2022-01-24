@@ -1,13 +1,13 @@
 #include "RelocElem.h"
 
-RelocElem:: RelocElem(){
+RelocElem::RelocElem()
+{
 
-this->locationCounter=0;
+    this->locationCounter = 0;
 
-this->section="*UND*";
+    this->section = "*UND*";
 
-this->type="??";
+    this->type = "??";
 
-this->value=-1;
-
+    this->value = -1;
 }

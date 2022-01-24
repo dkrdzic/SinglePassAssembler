@@ -5,27 +5,19 @@
 
 using namespace std;
 
-class RelocElem{
-
+class RelocElem
+{
 
 private:
+    RelocElem();
 
+    friend class Assembler;
 
-RelocElem();
+    int locationCounter;
 
-friend class Assembler;
-
-int locationCounter;
-
-
-string section;
-string type;
-int value;
-
-
+    string section;
+    string type;
+    int value;
 };
-
-
-
 
 #endif

@@ -9,25 +9,19 @@ using namespace std;
 
 class Instruction;
 
-
-class ForwardRef{
-
-
+class ForwardRef
+{
 
 private:
+    ForwardRef(int LC, string section);
+    ForwardRef();
 
+    int LC;
+    string section;
 
-ForwardRef(int LC,string section);
-ForwardRef();
+    int imDiAdSize;
 
-int LC;
-string section;
-
-int imDiAdSize;
-
-
-friend class Assembler;
-
+    friend class Assembler;
 };
 
 #endif

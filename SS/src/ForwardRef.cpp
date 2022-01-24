@@ -1,23 +1,17 @@
 #include "ForwardRef.h"
 #include "Instruction.h"
 
-ForwardRef:: ForwardRef(int LC, string section){
+ForwardRef::ForwardRef(int LC, string section)
+{
 
-this->LC=LC;
-this->section=section;
+    this->LC = LC;
+    this->section = section;
 
-
-
-this->imDiAdSize=-1;
-
+    this->imDiAdSize = -1;
 }
 
+ForwardRef::ForwardRef()
+{
 
-ForwardRef:: ForwardRef(){
-
-
-this->imDiAdSize=-1;
-    
-
-
+    this->imDiAdSize = -1;
 }
